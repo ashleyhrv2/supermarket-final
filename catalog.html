@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Grocery Store Catalog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h2>Welcome, {{ username }}! Browse Our Grocery Categories:</h2>
+    <div class="categories">
+        <button onclick="showCategory('fruit')">Fruit</button>
+        <button onclick="showCategory('poultry')">Poultry</button>
+        <button onclick="showCategory('meat')">Meat</button>
+        <button onclick="showCategory('beverage')">Beverages</button>
+        <button onclick="showCategory('frozen')">Frozen Foods</button>
+        <button onclick="showCategory('dietary')">Dietary Foods</button>
+        <button onclick="showCategory('kosher')">Kosher</button>
+        <button onclick="showCategory('halal')">Halal</button>
+    </div>
+    <div id="categoryContent"></div>
+</body>
+</html>

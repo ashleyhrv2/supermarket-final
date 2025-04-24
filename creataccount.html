@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Create account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h2>Create Account</h2>
+    <div id="messageBox" style="display: none;"></div>
+    <script>showMessage("{{ message }}");</script>
+
+    <form action="/register" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <button type="submit">Create Account</button>
+    </form>
+    <br>
+    <form action="/">
+        <button type="submit">Back to Home</button>
+    </form>
+</body>
+</html>
